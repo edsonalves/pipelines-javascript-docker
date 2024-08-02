@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: edsonalvespipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: edsonalvespipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: edsonalvespipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: edsonalvespipelinesjavascriptdocker 
+          image: javaedsonregistry.azurecr.io/edsonalvespipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
